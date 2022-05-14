@@ -16,10 +16,8 @@ const TitleBar = () => {
         </div>
         <div>
           <a className="ml-4" href="#about">about</a>
+          <a className="ml-4" href="#experience">experience</a>
           <a className="ml-4" href="#projects">projects</a>
-          {isBrowser() && window.innerWidth > 500 && (
-            <a className="ml-4" href="#resume">resume</a>
-          )}
         </div>
       </div>
     </div>

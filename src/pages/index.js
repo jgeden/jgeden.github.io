@@ -15,7 +15,7 @@ import Footer from "../components/Footer";
 import TitleBar from "../components/TitleBar";
 
 import resume from "../files/Joshua_Geden_Resume.pdf";
-import resumePNG from "../images/resume.png";
+import headshot from "../images/headshot.jpg";
 
 import berekelyLogo from "../images/berkeley-logo.png";
 import mealmeLogo from "../images/mealme-logo.png";
@@ -23,7 +23,7 @@ import nasaLogo from "../images/nasa-logo.png";
 import nerscLogo from "../images/nersc-logo.png";
 import "../styles/main.css";
 
-const anchors = ["home", "about", "projects", "resume"];
+const anchors = ["home", "about", "experience", "projects"];
 const isBrowser = () => typeof window !== "undefined";
 const mobileViewWidth = 600;
 
@@ -109,7 +109,7 @@ const Body = () => (
                   <Icon path={mdiEmail} className="icon" aria-label="email" />
                 </a>
                 <a
-                  href="https://github.com/Josh0823"
+                  href="https://github.com/jgeden"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -126,17 +126,6 @@ const Body = () => (
                     aria-label="LinkedIn"
                   />
                 </a>
-                <a
-                  href="https://discordapp.com/users/608489354847059989"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Icon
-                    path={mdiDiscord}
-                    className="icon"
-                    aria-label="Discrod"
-                  />
-                </a>
               </div>
             </div>
           </div>
@@ -144,23 +133,68 @@ const Body = () => (
           {/* about section */}
           <div className="section">
             <div className="flex flex-row justify-center items-center w-3/4 max-w-[760px] m-auto">
+              <div>
+                <img src={headshot} className="w-52 rounded-full" />
+              </div>
+              <ul className="ml-8 pl-2 list-disc">
+                <li className="mb-2">
+                  I am a rising senior at Duke pursuing a B.S. in Computer
+                  Science and a B.A. in German Studies.
+                </li>
+                <li className="mb-2">
+                  I was born and raised in Greenville, SC and graduated from our
+                  state's unique public residential STEM school, SCGSSM.
+                </li>
+                <li className="mb-2">
+                  I love to learn languages! I've taken 3 years of German, a
+                  semester of Russian, and am self-studying Italian.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* experience section */}
+          <div className="section">
+            <div className="flex flex-row justify-center items-center w-3/4 max-w-[760px] m-auto">
               <ul className="m-0 pl-2 list-disc">
-                <li className="mb-2">
+                <li className="mb-3">
                   <p>
-                    third-year undergraduate at duke university studying
-                    computer science, linguistics, and german
+                    As a full-stack intern at NERSC I developed Jupyter tools
+                    that help make supercomputing more user friendly.
                   </p>
                 </li>
-                <li className="mb-2">
+                <li className="mb-3">
                   <p>
-                    ex software engineer intern at nersc, mealme, and berkeley
-                    national lab. currently at nasa jpl
+                    I worked as a contract developer for MealMe, a startup
+                    building the new search engine for food.
                   </p>
                 </li>
-                <li className="mb-2">
+                <li className="mb-3">
                   <p>
-                    interested in full-stack development, open source, and
-                    building scientific tools
+                    I was a backend engineer at Berkeley National Lab and added
+                    new features to a scientific data pipeline used by over
+                    11,000 researchers.
+                  </p>
+                </li>
+                <li className="mb-3">
+                  <p>
+                    I'm currently a full-stack intern at NASA JPL and am
+                    developing hardware-software interface tools to make
+                    building spacecraft easier.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    View my resume{" "}
+                    <a
+                      className="text-center underline text-gray-400"
+                      href={resume}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      here
+                    </a>{" "}
+                    for some more details
                   </p>
                 </li>
               </ul>
@@ -222,45 +256,23 @@ const Body = () => (
           <div className="section">
             <Project
               title="GroupDuke"
-              link="https://github.com/Josh0823/GroupDuke"
-              description="Created a full-stack web app to help Duke students find course GroupMe chats. Built a reactive, multi-page frontend with SvelteKit. Used Fiber, an Express-inspired framework for Go, to implement automatic email registration, user auth, and firebase integration."
+              link="https://github.com/jgeden/GroupDuke"
+              description="I created a full-stack web app to help Duke students find course GroupMe chats. I built a reactive, multi-page frontend with SvelteKit and used Fiber, an Express-inspired framework for Go, to implement automatic email registration, user auth, and firebase integration."
               technologies="Typescript, Go, Firebase, Redis"
             />
             <Project
               title="JupyterHub Entrypoint Service"
               link="https://github.com/NERSC/jupyterhub-entrypoint"
-              description="Prototyped a full-stack extension service for JupyterHub that enables launching Jupyter notebooks in virtual environments or containers. This service is currently in use on NERSC's Perlmutter supercomputer and I presented the project to the Jupyter in High Performance Computing group."
+              description="I prototyped a full-stack extension service for JupyterHub that enables launching Jupyter notebooks in virtual environments or containers. This service is currently in use on NERSC's Perlmutter supercomputer, the 5th most powerful computer in the world."
               technologies="Jupyter, Javascript, Python, REST API, Selenium, CI/CD with GitHub Actions"
             />
             <Project
               title="SimplyFrank"
-              link="https://github.com/Josh0823/SimplyFrank"
+              link="https://github.com/jgeden/SimplyFrank"
               description='SimplyFrank holds a special place in my heart as my first "big" computer science project. A partner and I spent a month and a half designing and implementing our own programming language called SimplyFrank. We wrote a compiler that compiles SimplyFrank into SML (Simpletron Machine Language). We also wrote an interpreter that was able to execute SML code through C++.'
               technologies="C++, Assembly, Compilers, Interpreters"
             />
           </div>
-
-          {/* resume section */}
-          {isBrowser() && window.innerWidth > mobileViewWidth && (
-            <div className="section">
-              <div className="h-3/4">
-                <a
-                  className="text-center"
-                  href={resume}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <p>View in new tab</p>
-                </a>
-                <img
-                  src={resumePNG}
-                  alt="Resume"
-                  class="h-5/6 max-w-[800px]  m-auto"
-                  title="resume"
-                />
-              </div>
-            </div>
-          )}
         </ReactFullpage.Wrapper>
       );
     }}
