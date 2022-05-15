@@ -14,7 +14,6 @@ import {
 import Footer from "../components/Footer";
 import TitleBar from "../components/TitleBar";
 
-import resume from "../files/Joshua_Geden_Resume.pdf";
 import headshot from "../images/headshot.jpg";
 
 import berekelyLogo from "../images/berkeley-logo.png";
@@ -188,7 +187,7 @@ const Body = () => (
                     View my resume{" "}
                     <a
                       className="text-center underline text-gray-400"
-                      href={resume}
+                      href="https://jgeden.github.io/resume/joshua_geden_resume.pdf"
                       target="_blank"
                       rel="noreferrer"
                     >
