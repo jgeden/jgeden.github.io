@@ -1,6 +1,4 @@
-import * as React from "react";
-
-const isBrowser = () => typeof window !== "undefined";
+import React from "react";
 
 const TitleBar = () => {
   return (
