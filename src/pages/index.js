@@ -5,8 +5,8 @@ import { Helmet } from "react-helmet";
 import Icon from "@mdi/react";
 import {
   mdiCellphone,
-  mdiDiscord,
   mdiEmail,
+  mdiFileDocument,
   mdiGithub,
   mdiLinkedin,
 } from "@mdi/js";
@@ -102,6 +102,7 @@ const Body = () => (
                     path={mdiCellphone}
                     className="icon"
                     aria-label="Phone"
+                    title="Phone"
                   />
                 </a>
                 <a href="mailto:joshgeden10@gmail.com">
@@ -111,6 +112,7 @@ const Body = () => (
                   href="https://github.com/jgeden"
                   target="_blank"
                   rel="noreferrer"
+                  title="Email"
                 >
                   <Icon path={mdiGithub} className="icon" aria-label="GitHub" />
                 </a>
@@ -118,11 +120,24 @@ const Body = () => (
                   href="https://linkedin.com/in/joshua-geden"
                   target="_blank"
                   rel="noreferrer"
+                  title="GitHub"
                 >
                   <Icon
                     path={mdiLinkedin}
                     className="icon"
                     aria-label="LinkedIn"
+                  />
+                </a>
+                <a
+                  href="https://jgeden.github.io/resume/joshua_geden_resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Resume"
+                >
+                  <Icon
+                    path={mdiFileDocument}
+                    className="icon"
+                    aria-label="Resume"
                   />
                 </a>
               </div>
@@ -133,7 +148,7 @@ const Body = () => (
           <div className="section">
             <div className="flex flex-row justify-center items-center w-3/4 max-w-[760px] m-auto">
               <div>
-                <img src={headshot} className="w-52 rounded-full" />
+                <img src={headshot} alt="headshot" className="w-52 rounded-full" />
               </div>
               <ul className="ml-8 pl-2 list-disc">
                 <li className="mb-2">
@@ -186,7 +201,7 @@ const Body = () => (
                   <p>
                     View my resume{" "}
                     <a
-                      className="text-center underline text-gray-400"
+                      className="text-center underline text-gray-300"
                       href="https://jgeden.github.io/resume/joshua_geden_resume.pdf"
                       target="_blank"
                       rel="noreferrer"
