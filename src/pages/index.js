@@ -40,7 +40,7 @@ const Project = (props) => {
             />
           </a>
         </div>
-        <p className="mb-3">{props.description}</p>
+        <p className="mb-3">{props.children}</p>
         <p>Technologies: {props.technologies}</p>
       </div>
     </div>
@@ -97,22 +97,21 @@ const Body = () => (
                 <p className="text-md mb-1">cs @ duke | swe @ nasa jpl</p>
               </div>
               <div className="text-center flex flex-row justify-center">
-                <a href="tel:18643733991">
+                <a href="tel:18643733991" title="Phone">
                   <Icon
                     path={mdiCellphone}
                     className="icon"
                     aria-label="Phone"
-                    title="Phone"
                   />
                 </a>
-                <a href="mailto:joshgeden10@gmail.com">
+                <a href="mailto:joshgeden10@gmail.com" title="Email">
                   <Icon path={mdiEmail} className="icon" aria-label="email" />
                 </a>
                 <a
                   href="https://github.com/jgeden"
                   target="_blank"
                   rel="noreferrer"
-                  title="Email"
+                  title="GitHub"
                 >
                   <Icon path={mdiGithub} className="icon" aria-label="GitHub" />
                 </a>
@@ -120,7 +119,7 @@ const Body = () => (
                   href="https://linkedin.com/in/joshua-geden"
                   target="_blank"
                   rel="noreferrer"
-                  title="GitHub"
+                  title="LinkedIn"
                 >
                   <Icon
                     path={mdiLinkedin}
@@ -148,7 +147,11 @@ const Body = () => (
           <div className="section">
             <div className="flex flex-row justify-center items-center w-3/4 max-w-[760px] m-auto">
               <div>
-                <img src={headshot} alt="headshot" className="w-52 rounded-full" />
+                <img
+                  src={headshot}
+                  alt="headshot"
+                  className="w-52 rounded-full"
+                />
               </div>
               <ul className="ml-8 pl-2 list-disc">
                 <li className="mb-2">
@@ -271,21 +274,36 @@ const Body = () => (
             <Project
               title="GroupDuke"
               link="https://github.com/jgeden/GroupDuke"
-              description="I created a full-stack web app to help Duke students find course GroupMe chats. I built a reactive, multi-page frontend with SvelteKit and used Fiber, an Express-inspired framework for Go, to implement automatic email registration, user auth, and firebase integration."
               technologies="Typescript, Go, Firebase, Redis"
-            />
+            >
+              I created a full-stack web app to help Duke students find course
+              GroupMe chats. I built a reactive, multi-page frontend with
+              SvelteKit and used Fiber, an Express-inspired framework for Go, to
+              implement automatic email registration, user auth, and firebase
+              integration.
+            </Project>
             <Project
               title="JupyterHub Entrypoint Service"
               link="https://github.com/NERSC/jupyterhub-entrypoint"
-              description="I prototyped a full-stack extension service for JupyterHub that enables launching Jupyter notebooks in virtual environments or containers. This service is currently in use on NERSC's Perlmutter supercomputer, the 5th most powerful computer in the world."
               technologies="Jupyter, Javascript, Python, REST API, Selenium, CI/CD with GitHub Actions"
-            />
+            >
+              I prototyped a full-stack extension service for JupyterHub that
+              enables launching Jupyter notebooks in virtual environments or
+              containers. This service is currently in use on NERSC's Perlmutter
+              supercomputer, the 5th most powerful computer in the world.
+            </Project>
             <Project
               title="SimplyFrank"
               link="https://github.com/jgeden/SimplyFrank"
-              description='SimplyFrank holds a special place in my heart as my first "big" computer science project. A partner and I spent a month and a half designing and implementing our own programming language called SimplyFrank. We wrote a compiler that compiles SimplyFrank into SML (Simpletron Machine Language). We also wrote an interpreter that was able to execute SML code through C++.'
               technologies="C++, Assembly, Compilers, Interpreters"
-            />
+            >
+              SimplyFrank holds a special place in my heart as my first "big"
+              computer science project. A partner and I spent a month and a half
+              designing and implementing our own programming language called
+              SimplyFrank. We wrote a compiler that compiles SimplyFrank into
+              SML (Simpletron Machine Language). We also wrote an interpreter
+              that was able to execute SML code through C++.
+            </Project>
           </div>
         </ReactFullpage.Wrapper>
       );
