@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-[#232425] text-[#a9a9b3] font-body;
+    @apply bg-[#232425] font-body text-[#a9a9b3];
   }
 
   a {
@@ -16,15 +16,15 @@
   }
 
   .icon {
-    @apply w-8 p-1 m-2 mb-0 hover:bg-[#505152];
+    @apply m-2 mb-0 w-8 p-1 hover:bg-[#505152];
   }
 
   .about-img {
-    @apply w-10 min-w-[60px] m-2 grayscale-40;
+    @apply m-2 w-10 min-w-[60px] grayscale-40;
   }
 
   .fp-slidesNav {
-    @apply w-fit absolute;
+    @apply absolute w-fit;
   }
 
   .fp-bottom {

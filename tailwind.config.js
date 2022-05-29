@@ -9,7 +9,7 @@ module.exports = {
         },
       },
       animation: {
-        blink: "blink 1.5s infinite"
+        blink: "blink 1.5s infinite",
       },
       grayscale: {
         40: "40%",

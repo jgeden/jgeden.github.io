@@ -29,13 +29,13 @@ const mobileViewWidth = 600;
 const Project = (props) => {
   return (
     <div className="slide">
-      <div className="w-4/5 max-w-[760px] m-auto">
+      <div className="m-auto w-4/5 max-w-[760px]">
         <div className="flex flex-row items-center">
           <h3 className="mb-3">{props.title}</h3>
           <a href={props.link} target="_blank" rel="noreferrer">
             <Icon
               path={mdiGithub}
-              className="w-6 ml-3 mb-2 hover:bg-gray-600 inline"
+              className="ml-3 mb-2 inline w-6 hover:bg-gray-600"
               aria-label="GitHub"
             />
           </a>
@@ -89,14 +89,14 @@ const Body = () => (
           <div className="section">
             <div className="text-center">
               <div className="mb-3">
-                <h1 className="text-5xl font-bold font-['Inter']">
+                <h1 className="font-['Inter'] text-5xl font-bold">
                   Hi, I'm Josh
                 </h1>
               </div>
               <div>
                 <p className="text-md mb-1">cs @ duke | swe @ nasa jpl</p>
               </div>
-              <div className="text-center flex flex-row justify-center">
+              <div className="flex flex-row justify-center text-center">
                 <a href="tel:18643733991" title="Phone">
                   <Icon
                     path={mdiCellphone}
@@ -141,11 +141,12 @@ const Body = () => (
                 </a>
               </div>
             </div>
+            <Footer />
           </div>
 
           {/* about section */}
           <div className="section">
-            <div className="flex flex-row justify-center items-center w-3/4 max-w-[760px] m-auto">
+            <div className="m-auto flex w-3/4 max-w-[760px] flex-row items-center justify-center">
               <div>
                 <img
                   src={headshot}
@@ -153,7 +154,7 @@ const Body = () => (
                   className="w-52 rounded-full"
                 />
               </div>
-              <ul className="ml-8 pl-2 list-disc">
+              <ul className="ml-8 list-disc pl-2">
                 <li className="mb-2">
                   I am a rising senior at Duke pursuing a B.S. in Computer
                   Science and a B.A. in German Studies.
@@ -164,7 +165,7 @@ const Body = () => (
                 </li>
                 <li className="mb-2">
                   I love to learn languages! I've taken 3 years of German, a
-                  semester of Russian, and am self-studying Italian.
+                  semester of Russian, and am starting Italian courses soon.
                 </li>
               </ul>
             </div>
@@ -172,11 +173,11 @@ const Body = () => (
 
           {/* experience section */}
           <div className="section">
-            <div className="flex flex-row justify-center items-center w-3/4 max-w-[760px] m-auto">
-              <ul className="m-0 pl-2 list-disc">
+            <div className="m-auto flex w-3/4 max-w-[760px] flex-row items-center justify-center">
+              <ul className="m-0 list-disc pl-2">
                 <li className="mb-3">
                   <p>
-                    As a full-stack intern at NERSC I developed Jupyter tools
+                    As a full-stack intern at NERSC, I developed Jupyter tools
                     that help make supercomputing more user friendly.
                   </p>
                 </li>
@@ -204,7 +205,7 @@ const Body = () => (
                   <p>
                     View my resume{" "}
                     <a
-                      className="text-center underline text-gray-300"
+                      className="text-center text-gray-300 underline"
                       href="https://jgeden.github.io/resume/joshua_geden_resume.pdf"
                       target="_blank"
                       rel="noreferrer"
@@ -323,7 +324,6 @@ const IndexPage = () => {
           <Head />
           <TitleBar />
           <Body />
-          <Footer />
         </>
       )}
     </>

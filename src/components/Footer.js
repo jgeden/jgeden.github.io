@@ -2,15 +2,15 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="w-full absolute top-[90%] flex justify-center">
-      <div className="m-auto">
+    <div className="absolute top-[90%] flex w-full justify-center">
+      <div className="m-auto text-sm">
         <p>
-          &copy; 2022 | Inspired by {" "}
+          &copy; 2022 | Inspired by{" "}
           <a
             href="https://github.com/jgeden/jgeden.github.io#attribution"
             target="_blank"
             rel="noreferrer"
-            className="underline text-gray-400"
+            className="text-gray-400 underline"
           >
             Rohit
           </a>
