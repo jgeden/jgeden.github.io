@@ -32,13 +32,15 @@ const Project = (props) => {
       <div className="m-auto w-4/5 max-w-[760px]">
         <div className="flex flex-row items-center">
           <h3 className="mb-3">{props.title}</h3>
-          <a href={props.link} target="_blank" rel="noreferrer">
-            <Icon
-              path={mdiGithub}
-              className="ml-3 mb-2 inline w-6 hover:bg-gray-600"
-              aria-label="GitHub"
-            />
-          </a>
+          {props.link && (
+            <a href={props.link} target="_blank" rel="noreferrer">
+              <Icon
+                path={mdiGithub}
+                className="ml-3 mb-2 inline w-6 hover:bg-gray-600"
+                aria-label="GitHub"
+              />
+            </a>
+          )}
         </div>
         <p className="mb-3">{props.children}</p>
         <p>Technologies: {props.technologies}</p>
@@ -177,28 +179,26 @@ const Body = () => (
               <ul className="m-0 list-disc pl-2">
                 <li className="mb-3">
                   <p>
-                    As a full-stack intern at NERSC, I developed Jupyter tools
-                    that help make supercomputing more user friendly.
+                    I created Jupyter extensions to make supercomputing at NERSC
+                    more user friendly.
                   </p>
                 </li>
                 <li className="mb-3">
                   <p>
-                    I worked as a contract developer for MealMe, a startup
+                    I improved customer support tools at MealMe, a startup
                     building the new search engine for food.
                   </p>
                 </li>
                 <li className="mb-3">
                   <p>
-                    I was a backend engineer at Berkeley National Lab and added
-                    new features to a scientific data pipeline used by over
-                    11,000 researchers.
+                    I added new data analysis modules and features to a
+                    scientific data pipeline at Berkeley National Lab.
                   </p>
                 </li>
                 <li className="mb-3">
                   <p>
-                    I'm currently a full-stack intern at NASA JPL and am
-                    developing hardware-software interface tools to make
-                    building spacecraft easier.
+                    I'm currently developing hardware-software interface tools
+                    at NASA JPL to make building spacecraft easier.
                   </p>
                 </li>
                 <li>
@@ -272,6 +272,16 @@ const Body = () => (
 
           {/* projects section */}
           <div className="section">
+            <Project
+              title="regvue"
+              technologies="Vue, Tauri, Typescript, Rust, Tailwind CSS, Cypress, Docker"
+            >
+              I'm currently building a register documentation tool at NASA JPL
+              for use in the Europa Clipper and Mars Sample Return missions.
+              This project provides web and desktop applications that can
+              display design description files as a full documentation site with
+              advanced search, bit encoding/decoding, and bit diffing features.
+            </Project>
             <Project
               title="GroupDuke"
               link="https://github.com/jgeden/GroupDuke"
