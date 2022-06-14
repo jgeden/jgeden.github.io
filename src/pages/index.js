@@ -22,6 +22,8 @@ import nasaLogo from "../images/nasa-logo.png";
 import nerscLogo from "../images/nersc-logo.png";
 import "../styles/main.css";
 
+import text from "../data/text.json";
+
 const anchors = ["home", "about", "experience", "projects"];
 const isBrowser = () => typeof window !== "undefined";
 const mobileViewWidth = 600;
@@ -43,7 +45,9 @@ const Project = (props) => {
           )}
         </div>
         <p className="mb-3">{props.children}</p>
-        <p>Technologies: {props.technologies}</p>
+        <p>
+          {text.projects.technologies[props.lang]}: {props.technologies}
+        </p>
       </div>
     </div>
   );
@@ -70,7 +74,7 @@ const Head = () => {
   );
 };
 
-const Body = () => (
+const Body = (props) => (
   <ReactFullpage
     scrollingSpeed={1000}
     anchors={anchors}
@@ -92,11 +96,11 @@ const Body = () => (
             <div className="text-center">
               <div className="mb-3">
                 <h1 className="font-['Inter'] text-5xl font-bold">
-                  Hi, I'm Josh
+                  {text.home.greeting[props.lang]}
                 </h1>
               </div>
               <div>
-                <p className="text-md mb-1">cs @ duke | swe @ nasa jpl</p>
+                <p className="text-md mb-1">{text.home.summary[props.lang]}</p>
               </div>
               <div className="flex flex-row justify-center text-center">
                 <a href="tel:18643733991" title="Phone">
@@ -143,12 +147,12 @@ const Body = () => (
                 </a>
               </div>
             </div>
-            <Footer />
+            <Footer lang={props.lang} />
           </div>
 
           {/* about section */}
           <div className="section">
-            <div className="m-auto flex w-3/4 max-w-[760px] flex-row items-center justify-center">
+            <div className="m-auto flex w-[90%] max-w-[760px] flex-row items-center justify-center">
               <div>
                 <img
                   src={headshot}
@@ -157,62 +161,41 @@ const Body = () => (
                 />
               </div>
               <ul className="ml-8 list-disc pl-2">
-                <li className="mb-2">
-                  I am a rising senior at Duke pursuing a B.S. in Computer
-                  Science and a B.A. in German Studies.
-                </li>
-                <li className="mb-2">
-                  I was born and raised in Greenville, SC and graduated from our
-                  state's unique public residential STEM school, SCGSSM.
-                </li>
-                <li className="mb-2">
-                  I love to learn languages! I've taken 3 years of German, a
-                  semester of Russian, and am starting Italian courses soon.
-                </li>
+                <li className="mb-2">{text.about.uni[props.lang]}</li>
+                <li className="mb-2">{text.about.hs[props.lang]}</li>
+                <li className="mb-2">{text.about.fun_fact[props.lang]}</li>
               </ul>
             </div>
           </div>
 
           {/* experience section */}
           <div className="section">
-            <div className="m-auto flex w-3/4 max-w-[760px] flex-row items-center justify-center">
+            <div className="m-auto flex w-[90%] max-w-[760px] flex-col items-center justify-center space-y-6 md:w-[75%] md:flex-row md:space-x-2">
               <ul className="m-0 list-disc pl-2">
                 <li className="mb-3">
-                  <p>
-                    I created Jupyter extensions to make supercomputing at NERSC
-                    more user friendly.
-                  </p>
+                  <p>{text.experience.nersc[props.lang]}</p>
                 </li>
                 <li className="mb-3">
-                  <p>
-                    I improved customer support tools at MealMe, a startup
-                    building the new search engine for food.
-                  </p>
+                  <p>{text.experience.mealme[props.lang]}</p>
                 </li>
                 <li className="mb-3">
-                  <p>
-                    I added new data analysis modules and features to a
-                    scientific data pipeline at Berkeley National Lab.
-                  </p>
+                  <p>{text.experience.berkeley[props.lang]}</p>
                 </li>
                 <li className="mb-3">
-                  <p>
-                    I'm currently developing hardware-software interface tools
-                    at NASA JPL to make building spacecraft easier.
-                  </p>
+                  <p>{text.experience.jpl[props.lang]}</p>
                 </li>
                 <li>
                   <p>
-                    View my resume{" "}
+                    {text.experience.resume[props.lang].split("<a>")[0]}
                     <a
                       className="text-center text-gray-300 underline"
                       href="https://jgeden.github.io/resume/joshua_geden_resume.pdf"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      here
-                    </a>{" "}
-                    for some more details
+                      {text.experience.resume[props.lang].split("<a>")[1]}
+                    </a>
+                    {text.experience.resume[props.lang].split("<a>")[2]}
                   </p>
                 </li>
               </ul>
@@ -268,45 +251,25 @@ const Body = () => (
             <Project
               title="regvue"
               technologies="Vue, Tauri, Typescript, Rust, Tailwind CSS, Cypress, Docker"
+              lang={props.lang}
             >
-              I'm currently building a register documentation tool at NASA JPL
-              for use in the Europa Clipper and Mars Sample Return missions.
-              This project provides web and desktop applications that can
-              display design description files as a full documentation site with
-              advanced search, bit encoding/decoding, and bit diffing features.
+              {text.projects.regvue[props.lang]}
             </Project>
             <Project
               title="GroupDuke"
               link="https://github.com/jgeden/GroupDuke"
               technologies="Typescript, Go, Firebase, Redis"
+              lang={props.lang}
             >
-              I created a full-stack web app to help Duke students find course
-              GroupMe chats. I built a reactive, multi-page frontend with
-              SvelteKit and used Fiber, an Express-inspired framework for Go, to
-              implement automatic email registration, user auth, and firebase
-              integration.
+              {text.projects.group_duke[props.lang]}
             </Project>
             <Project
               title="JupyterHub Entrypoint Service"
               link="https://github.com/NERSC/jupyterhub-entrypoint"
               technologies="Jupyter, Javascript, Python, REST API, Selenium, CI/CD with GitHub Actions"
+              lang={props.lang}
             >
-              I prototyped a full-stack extension service for JupyterHub that
-              enables launching Jupyter notebooks in virtual environments or
-              containers. This service is currently in use on NERSC's Perlmutter
-              supercomputer, the 5th most powerful computer in the world.
-            </Project>
-            <Project
-              title="SimplyFrank"
-              link="https://github.com/jgeden/SimplyFrank"
-              technologies="C++, Assembly, Compilers, Interpreters"
-            >
-              SimplyFrank holds a special place in my heart as my first "big"
-              computer science project. A partner and I spent a month and a half
-              designing and implementing our own programming language called
-              SimplyFrank. We wrote a compiler that compiles SimplyFrank into
-              SML (Simpletron Machine Language). We also wrote an interpreter
-              that was able to execute SML code through C++.
+              {text.projects.entrypoint[props.lang]}
             </Project>
           </div>
         </ReactFullpage.Wrapper>
@@ -317,16 +280,22 @@ const Body = () => (
 
 const IndexPage = () => {
   const [loading, setLoading] = useState(true);
-
   setTimeout(() => setLoading(false), 100);
+
+  const langs = ["en", "de", "it"];
+  const [lang, setLang] = useState(langs[0]);
+
+  const changeLanguage = () => {
+    setLang(langs[(langs.indexOf(lang) + 1) % langs.length]);
+  };
 
   return (
     <>
       {!loading && (
         <>
-          <Head />
-          <TitleBar />
-          <Body />
+          <Head lang={lang} />
+          <TitleBar lang={lang} changeLanguage={changeLanguage} />
+          <Body lang={lang} />
         </>
       )}
     </>

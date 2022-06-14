@@ -1,11 +1,13 @@
 import React from "react";
 
-const Footer = () => {
+import text from "../data/text.json";
+
+const Footer = (props) => {
   return (
     <div className="absolute top-[90%] flex w-full justify-center">
       <div className="m-auto text-sm">
         <p>
-          &copy; 2022 | Inspired by{" "}
+          &copy; 2022 | {text.home.copyright[props.lang]}{" "}
           <a
             href="https://github.com/jgeden/jgeden.github.io#attribution"
             target="_blank"
