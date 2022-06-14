@@ -217,55 +217,48 @@ const Body = () => (
                 </li>
               </ul>
               {/* Logos */}
-              <div>
-                <div className="row-col">
-                  <a
-                    href="https://www.nersc.gov/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img
-                      src={nerscLogo}
-                      alt="NERSC Logo"
-                      aria-label="NERSC Logo"
-                      className="about-img"
-                    />
-                  </a>
-                  <a href="https://mealme.ai" target="_blank" rel="noreferrer">
-                    <img
-                      src={mealmeLogo}
-                      alt="MealMe Logo"
-                      aria-label="MealMe Logo"
-                      className="about-img"
-                    />
-                  </a>
-                </div>
-                <div className="row-col">
-                  <a
-                    href="https://www.lbl.gov/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img
-                      src={berekelyLogo}
-                      alt="Berkeley Lab Logo"
-                      aria-label="Berkeley Lab Logo"
-                      className="about-img"
-                    />
-                  </a>
-                  <a
-                    href="https://europa.nasa.gov/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img
-                      src={nasaLogo}
-                      alt="Berkeley Lab Logo"
-                      aria-label="NASA JPL Logo"
-                      className="about-img"
-                    />
-                  </a>
-                </div>
+              <div className="m-0 flex flex-row space-x-4 md:flex-col md:space-x-0">
+                <a
+                  href="https://www.nersc.gov/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={nerscLogo}
+                    alt="NERSC Logo"
+                    aria-label="NERSC Logo"
+                    className="about-img"
+                  />
+                </a>
+                <a href="https://mealme.ai" target="_blank" rel="noreferrer">
+                  <img
+                    src={mealmeLogo}
+                    alt="MealMe Logo"
+                    aria-label="MealMe Logo"
+                    className="about-img"
+                  />
+                </a>
+
+                <a href="https://www.lbl.gov/" target="_blank" rel="noreferrer">
+                  <img
+                    src={berekelyLogo}
+                    alt="Berkeley Lab Logo"
+                    aria-label="Berkeley Lab Logo"
+                    className="about-img"
+                  />
+                </a>
+                <a
+                  href="https://europa.nasa.gov/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={nasaLogo}
+                    alt="Berkeley Lab Logo"
+                    aria-label="NASA JPL Logo"
+                    className="about-img"
+                  />
+                </a>
               </div>
             </div>
           </div>
