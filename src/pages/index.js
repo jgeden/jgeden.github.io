@@ -152,7 +152,7 @@ const Body = (props) => (
 
           {/* about section */}
           <div className="section">
-            <div className="m-auto flex w-[90%] max-w-[760px] flex-row items-center justify-center">
+            <div className="m-auto flex h-screen w-[90%] max-w-[760px] flex-row items-center justify-center">
               <div>
                 <img
                   src={headshot}
@@ -170,7 +170,7 @@ const Body = (props) => (
 
           {/* experience section */}
           <div className="section">
-            <div className="m-auto flex w-[90%] max-w-[760px] flex-col items-center justify-center space-y-6 md:w-[75%] md:flex-row md:space-x-2">
+            <div className="m-auto flex h-screen w-[85%] max-w-[760px] flex-col items-center justify-center space-y-6 md:w-[75%] md:flex-row md:space-x-2">
               <ul className="m-0 list-disc pl-2">
                 <li className="mb-3">
                   <p>{text.experience.nersc[props.lang]}</p>

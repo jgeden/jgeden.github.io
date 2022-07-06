@@ -34,11 +34,13 @@ const TitleBar = (props) => {
             <a className="ml-4" href="#projects">
               {text.title_bar.projects[props.lang]}
             </a>
-            <img
-              src="https://img.icons8.com/ios/50/undefined/google-translate.png"
-              className="ml-1 mt-1 h-12 rounded p-3 invert-[70%] hover:cursor-pointer"
-              onClick={props.changeLanguage}
-            />
+            <button onClick={props.changeLanguage}>
+              <img
+                src="https://img.icons8.com/ios/50/undefined/google-translate.png"
+                className="ml-1 mt-1 h-12 rounded p-3 invert-[70%] hover:cursor-pointer"
+                alt="Language change icon"
+              />
+            </button>
           </div>
         </div>
       </div>
