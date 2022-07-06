@@ -19,4 +19,4 @@ Then create a branch on the repo called `gh-pages`. After making any changes and
 
 ## Attribution
 
-Styling was heavily inspired by <a href="https://github.com/rkaushik29/rkaushik29.github.io">rkaushik29.github.io</a> and reimplemted using Tailwind CSS.
+Styling was heavily inspired by <a href="https://github.com/rkaushik29/rkaushik29.github.io">rkaushik29.github.io</a> and reimplemented using Tailwind CSS.
