@@ -29,13 +29,13 @@
         },
         "copyright": {
             "en": "Inspired by ",
-            "de": "Inspiriert von",
-            "it": "Ispirato da"
+            "de": "Inspiriert von ",
+            "it": "Ispirato da "
         }
     },
     "about": {
         "uni": {
-            "en": "I am a rising senior at Duke pursuing a B.S. in Computer Science and a B.A. in German Studies",
+            "en": "I am a rising senior at Duke pursuing a B.S. in Computer Science and a B.A. in German Studies.",
             "de": "Ich bin in meinem vierten Jahr an der Duke Universität und mache einen B.S. in Informatik und einen B.A. in Germanistik.",
             "it": "Sono al quarto anno all'università Duke e sto studiando informatica e tedesco."
         },
