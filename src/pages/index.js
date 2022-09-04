@@ -282,7 +282,7 @@ const IndexPage = () => {
   const [loading, setLoading] = useState(true);
   setTimeout(() => setLoading(false), 100);
 
-  const langs = ["en", "de", "it"];
+  const langs = ["en", "de"];
   const [lang, setLang] = useState(langs[0]);
 
   const changeLanguage = () => {

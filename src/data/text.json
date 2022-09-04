@@ -35,7 +35,7 @@
     },
     "about": {
         "uni": {
-            "en": "I am a rising senior at Duke pursuing a B.S. in Computer Science and a B.A. in German Studies.",
+            "en": "I am a senior at Duke pursuing a B.S. in Computer Science and a B.A. in German Studies.",
             "de": "Ich bin in meinem vierten Jahr an der Duke Universität und mache einen B.S. in Informatik und einen B.A. in Germanistik.",
             "it": "Sono al quarto anno all'università Duke e sto studiando informatica e tedesco."
         },
@@ -45,8 +45,8 @@
             "it": "Sono nato e cresciuto in Carolina del Sud. Non sono mai stato in Italia, ma spero di andarci presto in vacanza."
         },
         "fun_fact": {
-            "en": "I love to learn languages! I've taken 3 years of German, a semester of Russian, and am starting Italian courses soon.",
-            "de": "Ich liebe es, Sprachen zu lernen! Ich lerne Deutsch seit 3 Jahren, habe Russisch für ein Semester studiert, und fange bald mit Italienischkursen an.",
+            "en": "I first attempted to code in middle school, but eventually fell in love with it in high school.",
+            "de": "Ich habe zum ersten Mal in der Middle School versucht, zu programmieren, aber habe mich schließlich in der High School darin verliebt.",
             "it": "Amo imparare le lingue. Studio il tedesco da 3 anni, ho studiato russo per un semestre, e presto inizierò i corsi di italiano."
         }
     },
