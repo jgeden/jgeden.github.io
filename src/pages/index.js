@@ -250,6 +250,7 @@ const Body = (props) => (
           <div className="section">
             <Project
               title="regvue"
+              link="https://github.com/jgeden/regvue-final-report"
               technologies="Vue, Tauri, Typescript, Rust, Tailwind CSS, Cypress, Docker"
               lang={props.lang}
             >
