@@ -221,7 +221,6 @@ const Body = (props) => (
                     className="about-img"
                   />
                 </a>
-
                 <a href="https://www.lbl.gov/" target="_blank" rel="noreferrer">
                   <img
                     src={berekelyLogo}
@@ -250,7 +249,7 @@ const Body = (props) => (
           <div className="section">
             <Project
               title="regvue"
-              link="https://github.com/jgeden/regvue-final-report"
+              link="https://jgeden.github.io/regvue-final-report/regvue-final-report.html"
               technologies="Vue, Tauri, Typescript, Rust, Tailwind CSS, Cypress, Docker"
               lang={props.lang}
             >
